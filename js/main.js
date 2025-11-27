@@ -1,4 +1,3 @@
-// Set current year in footer
 document.addEventListener("DOMContentLoaded", function () {
     const yearSpan = document.getElementById("year");
     if (yearSpan) {
@@ -17,7 +16,6 @@ function attachContactFormValidation() {
     if (!form) return;
 
     form.addEventListener("submit", function (e) {
-        // Basic check
         const name = form.name.value.trim();
         const email = form.email.value.trim();
         const subject = form.subject.value.trim();
@@ -30,7 +28,6 @@ function attachContactFormValidation() {
             return;
         }
 
-        // Simple email regex
         const emailPattern = /\S+@\S+\.\S+/;
         if (!emailPattern.test(email)) {
             e.preventDefault();
@@ -41,7 +38,7 @@ function attachContactFormValidation() {
 
         status.textContent = "Submitting...";
         status.style.color = "black";
-        // Let the form submit normally (to PHP)
+        // Let the form submit to PHP
     });
 }
 
@@ -73,12 +70,14 @@ function loadProjectsFromXML() {
                     } else {
                         container.innerHTML = "<p>Your browser does not support XSLT.</p>";
                     }
+                } else {
+                    container.innerHTML = "<p>Unable to load XSL file.</p>";
                 }
             };
 
             xslRequest.send();
         } else {
-            container.innerHTML = "<p>Could not load projects.</p>";
+            container.innerHTML = "<p>Unable to load projects.</p>";
         }
     };
 

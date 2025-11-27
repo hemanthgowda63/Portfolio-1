@@ -1,8 +1,8 @@
 <?php
-$host = "localhost";       // change if needed
-$dbname = "portfolio_db";  // your DB name
-$username = "root";        // DB username
-$password = "";            // DB password
+$host = "localhost";
+$dbname = "portfolio_db";  // make sure this DB exists
+$username = "root";        // XAMPP default
+$password = "";            // XAMPP default is empty
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);

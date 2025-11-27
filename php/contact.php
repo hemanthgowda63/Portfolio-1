@@ -7,7 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $subject = trim($_POST["subject"] ?? "");
     $message = trim($_POST["message"] ?? "");
 
-    // Basic validation
     if ($name === "" || $email === "" || $subject === "" || $message === "") {
         echo "Please fill all fields.";
         exit;
@@ -18,19 +17,22 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         exit;
     }
 
-    // Insert into database
-    $sql = "INSERT INTO contact_messages (name, email, subject, message)
-            VALUES (:name, :email, :subject, :message)";
+    try {
+        $sql = "INSERT INTO contact_messages (name, email, subject, message)
+                VALUES (:name, :email, :subject, :message)";
 
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute([
-        ":name"    => $name,
-        ":email"   => $email,
-        ":subject" => $subject,
-        ":message" => $message
-    ]);
+        $stmt = $pdo->prepare($sql);
+        $stmt->execute([
+            ":name"    => $name,
+            ":email"   => $email,
+            ":subject" => $subject,
+            ":message" => $message
+        ]);
 
-    echo "Message sent successfully!";
+        echo "Message sent successfully and stored in database!";
+    } catch (PDOException $e) {
+        echo "Error saving message: " . $e->getMessage();
+    }
 } else {
     echo "Invalid request.";
 }
