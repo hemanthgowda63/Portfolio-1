@@ -1,0 +1,288 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background: #f5f5f5;
+    color: #222;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* NAVBAR */
+
+header {
+    background: #111;
+    color: #fff;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #ff5722;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.95rem;
+}
+
+nav a:hover {
+    color: #ff5722;
+}
+
+/* HERO */
+
+.hero {
+    background: linear-gradient(135deg, #111, #333);
+    color: #fff;
+    padding: 60px 0;
+}
+
+.hero-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: center;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.hero-text h1 span {
+    color: #ff9800;
+}
+
+.hero-text p {
+    margin-bottom: 10px;
+}
+
+.hero-buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 18px;
+    border-radius: 4px;
+    background: #ff5722;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn.outline {
+    background: transparent;
+    border: 1px solid #fff;
+}
+
+.btn:hover {
+    opacity: 0.85;
+}
+
+.hero-image {
+    flex: 0.8;
+    text-align: center;
+}
+
+.hero-image img {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ff9800;
+}
+
+/* SECTIONS */
+
+.section {
+    padding: 60px 0;
+    background: #f5f5f5;
+}
+
+.section.alt {
+    background: #ffffff;
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* SKILLS */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+}
+
+.skill-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+/* TIMELINE (EDUCATION) */
+
+.timeline {
+    display: grid;
+    gap: 20px;
+}
+
+.timeline-item {
+    background: #fff;
+    padding: 20px;
+    border-left: 4px solid #ff5722;
+    border-radius: 4px;
+}
+
+/* LISTS */
+
+.list {
+    margin-top: 10px;
+    padding-left: 20px;
+}
+
+.list li {
+    margin-bottom: 8px;
+}
+
+/* PROJECTS (from XML) */
+
+#projects-container .project-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
+}
+
+/* CONTACT FORM */
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 9px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-size: 0.9rem;
+}
+
+/* FOOTER */
+
+footer {
+    background: #111;
+    color: #fff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.85rem;
+}
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+#form-status {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.btn {
+    padding: 10px 16px;
+    background: #ff5722;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
